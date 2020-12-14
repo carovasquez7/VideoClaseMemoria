@@ -1,0 +1,55 @@
+
+<objeto titulo="Nombre del Objeto" tema="usach" autor="Autor">
+	<escena titulo="Titulo de la escena" tipo="1Col">
+		<bloque>
+			<idea orden="1">
+				<texto tipo="normal">Prueba</texto>
+				<media tipo="imagen">http://static.emol.cl/emol50/img/logo_emol.gif</media>
+				<ejemplos>
+					<ejemplo>
+						<texto_ejemplo tipo="normal">Uno</texto_ejemplo>
+					</ejemplo>
+					<ejemplo>
+						<texto_ejemplo tipo="codigo">dos</texto_ejemplo>
+					</ejemplo>
+					<ejemplo>
+						<texto_ejemplo tipo="manuscrito">tres</texto_ejemplo>
+					</ejemplo>
+					<ejemplo>
+						<media_ejemplo tipo="imagen">http://static.emol.cl/emol50/img/logo_emol.gif</media_ejemplo>
+					</ejemplo>
+				</ejemplos>
+				<voz>hola, hola</voz>
+			</idea>
+		</bloque>
+	</escena>
+	<evaluacion exigencia_min="60" exigencia_max="80">
+		<pregunta>
+			<forma>
+				<enunciado>
+					<texto tipo="normal">Qué es Python?</texto>
+				</enunciado>
+				<opciones>
+					<alternativa tipo="solucion" tema="Conceptos">
+						<texto tipo="normal">Lenguaje de programación de alto nivel</texto>
+					</alternativa>
+					<alternativa tipo="distractor" tema="Conceptos">
+						<texto tipo="normal">Lenguaje de programación de bajo nivel</texto>
+					</alternativa>
+					<alternativa tipo="distractor" tema="Sistemas operativos">
+						<texto tipo="normal">Sistema operativo</texto>
+					</alternativa>
+					<alternativa tipo="distractor" tema="Programación">
+						<texto tipo="normal">Sentencia de código condicional</texto>
+					</alternativa>
+				</opciones>
+				<solucion>
+					<texto tipo="normal">La <destacar>solución</destacar> a esta pregunta es la alternativa a)</texto>
+				</solucion>
+			</forma>
+		</pregunta>
+	</evaluacion>
+	<feedback>https://docs.google.com/forms/d/1Zrj3pYt84a9bDFoHQrZvUM4uSiGSEUuX20x-Bco1-b8/viewform</feedback>
+</objeto>
+
+

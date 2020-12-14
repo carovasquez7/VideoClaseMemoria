@@ -1,0 +1,111 @@
+{
+    "objeto": {
+        "@titulo": "Nombre del Objeto",
+        "@tema": "usach",
+        "@autor": "Autor",
+        "escena": {
+            "@titulo": "Titulo de la escena",
+            "@tipo": "1Col",
+            "bloque": {
+                "idea": {
+                    "@orden": "1",
+                    "texto": {
+                        "@tipo": "normal",
+                        "#text": "Prueba"
+                    },
+                    "media": {
+                        "@tipo": "imagen",
+                        "#text": "http://static.emol.cl/emol50/img/logo_emol.gif"
+                    },
+                    "ejemplos": {
+                        "ejemplo": [
+                            {
+                                "texto_ejemplo": {
+                                    "@tipo": "normal",
+                                    "#text": "Uno"
+                                }
+                            },
+                            {
+                                "texto_ejemplo": {
+                                    "@tipo": "codigo",
+                                    "#text": "dos"
+                                }
+                            },
+                            {
+                                "texto_ejemplo": {
+                                    "@tipo": "manuscrito",
+                                    "#text": "tres"
+                                }
+                            },
+                            {
+                                "media_ejemplo": {
+                                    "@tipo": "imagen",
+                                    "#text": "http://static.emol.cl/emol50/img/logo_emol.gif"
+                                }
+                            }
+                        ]
+                    },
+                    "voz": "hola, hola"
+                }
+            }
+        },
+        "evaluacion": {
+            "@exigencia_min": "60",
+            "@exigencia_max": "80",
+            "pregunta": {
+                "forma": {
+                    "enunciado": {
+                        "texto": {
+                            "@tipo": "normal",
+                            "#text": "Qu\u00e9 es Python?"
+                        }
+                    },
+                    "opciones": {
+                        "alternativa": [
+                            {
+                                "@tipo": "solucion",
+                                "@tema": "Conceptos",
+                                "texto": {
+                                    "@tipo": "normal",
+                                    "#text": "Lenguaje de programaci\u00f3n de alto nivel"
+                                }
+                            },
+                            {
+                                "@tipo": "distractor",
+                                "@tema": "Conceptos",
+                                "texto": {
+                                    "@tipo": "normal",
+                                    "#text": "Lenguaje de programaci\u00f3n de bajo nivel"
+                                }
+                            },
+                            {
+                                "@tipo": "distractor",
+                                "@tema": "Sistemas operativos",
+                                "texto": {
+                                    "@tipo": "normal",
+                                    "#text": "Sistema operativo"
+                                }
+                            },
+                            {
+                                "@tipo": "distractor",
+                                "@tema": "Programaci\u00f3n",
+                                "texto": {
+                                    "@tipo": "normal",
+                                    "#text": "Sentencia de c\u00f3digo condicional"
+                                }
+                            }
+                        ]
+                    },
+                    "solucion": {
+                        "texto": {
+                            "@tipo": "normal",
+                            "destacar": "soluci\u00f3n",
+                            "#text": "La  a esta pregunta es la alternativa a)"
+                        }
+                    }
+                }
+            }
+        },
+        "feedback": "https://docs.google.com/forms/d/1Zrj3pYt84a9bDFoHQrZvUM4uSiGSEUuX20x-Bco1-b8/viewform"
+    }
+}
