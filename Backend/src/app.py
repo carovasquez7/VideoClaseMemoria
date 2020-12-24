@@ -23,7 +23,8 @@ def home():
 
 @app.route('/files-xml', methods=['GET'])
 def get_xmlfile():
-    files = mongo.db.files.find()
+    basedatos= mongo.db.files
+    files = basedatos.find({},{"_id":0, "objeto.titulo":1})
     response = json_util.dumps(files)
     return Response(response, mimetype='/application/json')
 
@@ -34,11 +35,12 @@ def upload_xmlfile():
   if request.method == "POST":
     if request.files:
       xmlfile = request.files['xmlfile']
-      docJson = xmltodict.parse(xmlfile.read()) #Etapa de convertir XML a JSON (xml a dic)
+      docJson = xmltodict.parse(xmlfile.read(),attr_prefix='') #Etapa de convertir XML a JSON (xml a dic)
       finalJson = json.loads(json.dumps(docJson))#json final
+      print(finalJson)
       #Cargar archivo XML a mongo
       #Cargar finalJson a mongo-base de datos
-      mongo.db.files.insert(finalJson)  
+      mongo.db.files.insert_one(finalJson)  
       print("xml guardado")
       return redirect(request.url)
   

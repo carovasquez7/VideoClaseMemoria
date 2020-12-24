@@ -1,0 +1,614 @@
+<objeto titulo="Clase 4: Decisiones en Python" tema="usach" autor="Dr. José Luis Jara">
+	<escena titulo="RECOMENDACIONES" tipo="1Col">
+		<bloque>
+			<idea orden="1">
+				<texto tipo="normal">Objeto anterior: <enfatizar> ejecución secuencial</enfatizar> </texto>
+				<voz>Recuerde que antes de ver este objeto debe haber estudiado el de ejecución secuencial</voz>
+			</idea>
+		</bloque>
+	</escena>
+	<escena titulo="INTRODUCCIÓN" tipo="3Col">
+		<bloque>
+			<idea orden="1">
+				<texto tipo="normal">Estructura bien definida</texto>
+				<voz>Los programas tienen una estructura bien definida para resolver un problema del mundo real</voz>
+			</idea>
+			<idea orden="2">
+				<texto tipo="normal">Definir e invocar funciones</texto>
+				<voz>Podemos definir e invocar funciones, lo que nos ayuda a ordenar los programas</voz>
+			</idea>
+			<idea orden="3">
+				<texto tipo="normal"><enfatizar> Ejecución secuencial</enfatizar></texto>
+				<voz>Sin embargo, sólo hemos visto la ejecución secuencial de instrucciones</voz>
+			</idea>
+			<idea orden="4">
+				<voz>Es decir, se ejecutan las secuencias paso a paso, a través de un camino único</voz>
+			</idea>
+			<idea orden="5">
+				<voz>Pero, ¿qué sucede si no siempre queremos ejecutar una sentencia?</voz>
+			</idea>
+			<idea orden="6">
+				<voz>¿Y si queremos que el programa pueda elegir entre dos caminos?</voz>
+			</idea>
+			<idea orden="7">
+				<texto tipo="normal"><enfatizar>Capacidad de decisión.</enfatizar></texto>
+				<voz>Para ello, hoy aprenderemos a realizar programas con capacidad de decisión</voz>
+			</idea>
+		</bloque>
+		<bloque>
+			<idea orden="4">
+				<media tipo="imagen">http://i.imgur.com/N76jXFx.png</media>
+			</idea>
+		</bloque>
+		<bloque>
+			<idea orden="7">
+				<media tipo="imagen">http://i.imgur.com/oT5dTAD.png</media>
+			</idea>
+		</bloque>
+	</escena>
+
+
+	<escena titulo="OBJETIVOS" tipo="1Col">
+		<bloque>
+			<idea orden="1">
+				<voz>Los contenidos de hoy son</voz>
+			</idea>
+			<idea orden="2">
+				<texto tipo="normal">Conocer los operadores de comparación</texto>
+				<voz>Conocer los operadores de comparación</voz>
+			</idea>
+			<idea orden="3">
+				<texto tipo="normal">Usar expresiones booleanas para responder preguntas simples</texto>
+				<voz>Usar expresiones buleanas para responder preguntas simples</voz>
+			</idea>
+			<idea orden="4">
+				<texto tipo="normal">Crear expresiones booleanas complejas</texto>
+				<voz>Crear expresiones buleanas complejas</voz>
+			</idea>
+			<idea orden="5">
+				<texto tipo="normal">Utilizar las sentencias<enfatizar> if</enfatizar> e <enfatizar>if-else</enfatizar> para condicionar la ejecución de bloques de sentencias.</texto>
+				<voz>Utilizar las sentencias if, e, if else para condicionar la ejecución de bloques de sentencias</voz>
+			</idea>
+		</bloque>
+	</escena>
+	
+	<escena titulo="VALORES BOOLEANOS" tipo="1Col">
+		<bloque>
+			<idea orden="1">
+				<texto tipo="normal"><destacar>True</destacar> o <destacar>False</destacar>.</texto>
+				<voz>Al realizar una comparación, python entrega como resultado los valores true o false</voz>
+			</idea>
+			<idea orden="2">
+				<voz>Estos valores son denominados buleanos</voz>
+			</idea>
+			<idea orden="3">
+				<texto tipo="normal">Evaluación lógica.</texto>
+				<voz>Representan el resultado de una evaluación lógica</voz>
+			</idea>
+			<idea orden="4">
+				<texto tipo="normal">Tipo de dato nativo en Python.</texto>
+				<voz>y son un tipo de dato nativo en python</voz>
+			</idea>
+			<idea orden="5">
+				<voz>No hay más posibilidades, verdadero o falso</voz>
+			</idea>
+			<idea orden="6">
+				<texto tipo="normal">Expresiones booleanas</texto>
+				<voz>Las expresiones que devuelven valores lógicos se denominan expresiones buleanas</voz>
+			</idea>
+		</bloque>
+	</escena>
+
+	<escena titulo="EXPRESIONES BOOLEANAS" tipo="1Fil2Col">
+		<bloque>
+			<idea orden="1">
+				<texto tipo="normal">Operadores de comparación:</texto>
+				<voz>Python maneja varios operadores de comparación, como por ejemplo</voz>
+			</idea>
+		</bloque>
+		<bloque>
+			<idea orden="2">
+				<texto tipo="normal">Mayor que &gt;</texto>
+				<voz>Mayor que </voz>
+			</idea>
+
+			<idea orden="4">
+				<texto tipo="normal">Mayor o igul que &gt;=</texto>
+				<voz>Mayor o igual que</voz>
+			</idea>
+
+			<idea orden="6">
+				<texto tipo="normal">Menor que &lt;</texto>
+				<voz>Menor que</voz>
+			</idea>
+
+			<idea orden="8">
+				<texto tipo="normal">Menor o igual que &lt;=</texto>
+				<voz>Menor o igual que</voz>
+			</idea>
+
+			<idea orden="10">
+				<texto tipo="normal">Igual que ==</texto>
+				<voz>Igual que</voz>
+			</idea>
+			
+			<idea orden="12">
+				<texto tipo="normal">Distinto de !=</texto>
+				<voz>Distinto de</voz>
+			</idea>
+		</bloque>
+
+		<bloque>
+			<idea orden="3">
+				<texto tipo="normal">3.1 &gt; 3.2</texto>
+				<voz>3.1 &gt; 3.2, es falso</voz>
+			</idea>
+
+			<idea orden="5">
+				<texto tipo="normal">4.0 &gt;= 3.9</texto>
+				<voz>4.0 mayor o igual que 3.9, es verdadero</voz>
+			</idea>
+
+			<idea orden="7">
+				<texto tipo="normal">-2 &lt; 0</texto>
+				<voz>-2 &lt; 0, es verdadero</voz>
+			</idea>
+
+			<idea orden="9">
+				<texto tipo="normal">3.2 &lt;= 3.14</texto>
+				<voz>3.2 menor o igual que 3.14, es falso</voz>
+			</idea>
+
+			<idea orden="11">
+				<texto tipo="normal">2.0 == 2</texto>
+				<voz>2.0 es igual a 2, es verdadero</voz>
+			</idea>
+			
+			<idea orden="13">
+				<texto tipo="normal">-2 != -2.1</texto>
+				<voz> -2 distinto de -2.1, es verdadero</voz>
+			</idea>
+		</bloque>
+	</escena>
+
+	<escena titulo="EXPRESIONES BOOLEANAS" tipo="1Col">
+		<bloque>
+			<idea orden="1">
+				<voz>Existen además operadores para componer expresiones buleanas</voz>
+			</idea>
+			<idea orden="2">
+				<texto tipo="normal">La conjunción o "y lógico" (<destacar>and</destacar>).</texto>
+				<voz>La conjunción o y lógico, and, que es verdadero cuando todas las sub expresiones son verdaderas</voz>
+			</idea>
+			<idea orden="3">
+				<texto tipo="codigo"> y &gt; x and x &lt;= z </texto>
+				<voz>Por ejemplo, la siguiente expresión es verdadera cuando y es &gt; x, y x es menor o igual a z</voz>
+			</idea>
+			<idea orden="4">
+				<texto tipo="normal">La disyunción u "o lógico" (<destacar>or</destacar>).</texto>
+				<voz>La disyunción, u o lógico, que es verdadero si alguna de sus sub expresiones es verdadera</voz>
+			</idea>
+			<idea orden="5">
+				<texto tipo="codigo"> x != y or y &lt; z </texto>
+				<voz>Esta expresión es verdadera si x es distinto de y, o si y es &lt; z</voz>
+			</idea>
+			<idea orden="6">
+				<texto tipo="normal">Operador negación (<destacar>not</destacar>)</texto>
+				<voz>Finalmente existe el operador negación, not, para invertir el valor de verdad</voz>
+			</idea>
+			<idea orden="7">
+				<voz>o sea, si es verdadero será falso y si es falso será verdadero</voz>
+			</idea>
+		</bloque>
+	</escena>
+
+	<escena titulo="REGLAS DE PRECEDENCIA" tipo="1Col">
+		<bloque>
+			<idea orden="1">
+				<texto tipo="normal">Reglas de precedencia:</texto>
+				<voz>Los operadores buleanos también tienen reglas de precedencia</voz>
+			</idea>
+			<idea orden="2">
+				<texto tipo="normal">Comparación &lt; aritméticos</texto>
+				<voz>Los operadores de comparación tienen menor precedencia que los operadores aritméticos</voz>
+			</idea>
+			<idea orden="3">
+				<texto tipo="normal"><destacar>not, and y or</destacar></texto>
+				<voz>Luego tienen precedencia los operadores not, and, y or.</voz>
+			</idea>
+			<idea orden="4">
+				<texto tipo="normal">Alterar precedencia con paréntesis</texto>
+				<voz>Podemos alterar esta precedencia usando paréntesis</voz>
+			</idea>
+		</bloque>
+	</escena>
+	
+	<escena titulo="SENTENCIA IF" tipo="1Col">
+		<bloque>
+			<idea orden="1">
+				<texto tipo="normal"><enfatizar>Condicionar</enfatizar> ejecución.</texto>
+				<voz>La sentencia if permite condicionar la ejecución de un bloque si es que se cumple una condición</voz>
+			</idea>
+			<idea orden="2">
+				<voz>La condición es una expresión buleana</voz>
+			</idea>
+			<idea orden="3">
+				<voz>la sintaxis es la siguiente</voz>
+			</idea>
+			<idea orden="4">
+				<subidea>
+					<subtexto voz="Primero va un if">if</subtexto>
+					<subtexto voz="seguido de una condición a evaluar"> [condición]</subtexto>
+					<subtexto voz="y termina con 2 puntos"> :</subtexto>
+				</subidea>
+				<subidea>
+					<subtexto voz="Luego viene el bloque de sentencias condicional que solo se ejecutan si la condición es verdadera"><tab/>[Bloque de sentencias condicionales]</subtexto>
+				</subidea>
+				<subidea>
+					<subtexto voz="Finalmente el bloque de sentencias que se ejecutan al terminar el if">[Bloque de sentencias que sigue]</subtexto>
+				</subidea>
+			</idea>
+			<idea orden="5">
+				<voz>Note que el bloque condicional está más hacia la derecha del if, a esto se llama identación</voz>
+			</idea>
+		</bloque>
+	</escena>
+
+	<escena titulo="SENTENCIA IF" tipo="1Col">
+		<bloque>
+			<idea orden="1">
+				<texto tipo="normal">Como diagrama:</texto>
+				<media tipo="imagen">http://i.imgur.com/T4AAErw.png</media>
+				<voz>El flujo de ejecución pasa de largo si la condición no se cumple</voz>
+			</idea>
+
+			<idea orden="2">
+				<voz>Pero pasa por el cuerpo de la sentencia if si la condición resulta con valor verdadero</voz>
+			</idea>
+		</bloque>
+	</escena>
+<escena titulo="SENTENCIA IF-ELSE" tipo="1Col">
+		<bloque>
+			<idea orden="1">
+				<voz>El if se puede usar junto con un else, para ejecutar sentencias cuando no se cumple su condición</voz>
+			</idea>
+			<idea orden="2">
+				<voz>la sintaxis es la siguiente</voz>
+			</idea>
+			
+			<idea orden="3">
+				<subidea>
+					<subtexto voz="El if y su condición seguido de dos puntos">if [condición]:</subtexto>
+				</subidea>
+				<subidea>
+					<subtexto voz="el bloque de sentencias condicionales identado"><tab/>[Bloque de sentencias condicionales]</subtexto>
+				</subidea>
+				<subidea>
+					<subtexto voz="el else">else</subtexto>
+					<subtexto voz="y 2 puntos"> :</subtexto>
+				</subidea>
+				<subidea>
+					<subtexto voz="seguido del bloque de sentencias alternativo, para cuando no se cumpla la condición del if"><tab/>[Bloque de sentencias alternativo]</subtexto>
+				</subidea>
+				<subidea>
+					<subtexto voz="y finalmente el bloque de sentencias que se ejecuta al terminar el if o el else">[Bloque de sentencias que sigue]</subtexto>
+				</subidea>
+			</idea>
+		</bloque>
+	</escena>
+
+	
+	<escena titulo="EJEMPLOS" tipo="1Col">
+		<bloque>
+			<idea orden="1">
+				<ejemplos>
+					<ejemplo>
+						<texto_ejemplo tipo="normal">El siguiente código imprime "Hola mundo"</texto_ejemplo>
+						<texto_ejemplo tipo="codigo">
+							var1 = 100
+							if var1 &gt;0:
+							    print "Hola mundo"
+							else:
+							    print "Chao mundo"
+						</texto_ejemplo>
+					</ejemplo>
+					<ejemplo>
+						<texto_ejemplo tipo="normal">El siguiente código imprime "Chao mundo"</texto_ejemplo>
+						<texto_ejemplo tipo="codigo">
+							var1 = 0
+							if var1 &lt;1:
+							    print "Hola mundo"
+							else:
+							    print "Chao mundo"
+						</texto_ejemplo>
+					</ejemplo>
+				</ejemplos>
+				<voz>A continuación se puede ver un ejemplo de if else</voz>
+			</idea>
+		</bloque>
+	</escena>
+
+	<escena titulo="EJEMPLOS" tipo="1Col">
+		<bloque>
+			<idea orden="1">
+				<ejemplos>
+					<ejemplo>
+						<texto_ejemplo tipo="normal">El siguiente código imprime:</texto_ejemplo>
+						<texto_ejemplo tipo="normal">"Hola mundo"</texto_ejemplo>
+						<texto_ejemplo tipo="normal">"Fin"</texto_ejemplo>
+						<texto_ejemplo tipo="codigo">
+							var1 = 100
+							if var1 &gt;50:
+							    print "Hola mundo"
+							else:
+							    print "Chao mundo"
+							print "Fin"
+						</texto_ejemplo>
+					</ejemplo>
+					<ejemplo>
+						<texto_ejemplo tipo="normal">El siguiente código imprime:</texto_ejemplo>
+						<texto_ejemplo tipo="normal">"Chao mundo"</texto_ejemplo>
+						<texto_ejemplo tipo="normal">"Fin"</texto_ejemplo>
+						<texto_ejemplo tipo="codigo">
+							var1 = 0
+							if var1 &gt; 50:
+							    print "Hola mundo"
+							else:
+							    print "Chao mundo"
+							print "Fin"
+						</texto_ejemplo>
+					</ejemplo>
+				</ejemplos>
+				<voz>Acá se puede ver otro</voz>
+			</idea>
+		</bloque>
+	</escena>
+	
+	<evaluacion exigencia_min="60" exigencia_max="80">
+		<pregunta>
+			<forma>
+				<enunciado>
+					<texto tipo="codigo">¿Cuál es la manera correcta de usar if en python?</texto>		
+				</enunciado>
+				<opciones>
+					<alternativa tipo="solucion" tema="sintaxis"> 
+						<texto tipo="normal">if x == 0 :</texto>
+					</alternativa>
+					<alternativa tipo="distractor" tema="sintaxis"> 
+						<texto tipo="normal">if (x == 0){</texto>
+					</alternativa>
+					<alternativa tipo="distractor" tema="sintaxis"> 
+						<texto tipo="normal">if (x == 0) fi</texto>
+					</alternativa>
+					<alternativa tipo="distractor" tema="sintaxis"> 
+						<texto tipo="normal">if : x==0</texto>
+					</alternativa>
+				</opciones>
+				<solucion>
+					<texto tipo="normal">La sintaxis correcta es if seguido de una condición y terminar con :</texto>
+				</solucion>
+			</forma>
+			
+			<forma>
+				<enunciado>
+					<texto tipo="normal">¿Cuál es la manera correcta de usar else en python?</texto>		
+				</enunciado>
+				<opciones>
+					<alternativa tipo="distractor" tema="sintaxis"> 
+						<texto tipo="normal">
+							if x==0:
+							else x!=0 </texto>
+					</alternativa>
+					<alternativa tipo="distractor" tema="sintaxis"> 
+						<texto tipo="normal">
+							if (x==0) fi
+							else (x!=0) esle</texto>
+					</alternativa>
+					<alternativa tipo="solucion" tema="sintaxis"> 
+						<texto tipo="normal">
+							if x==0:
+							else: </texto>
+					</alternativa>
+					<alternativa tipo="distractor" tema="sintaxis"> 
+						<texto tipo="normal">
+							if : x==0
+							else : x!=0</texto>
+					</alternativa>
+				</opciones>
+				<solucion>
+					<texto tipo="normal">La sintaxis correcta es else después del if y seguido de :</texto>
+				</solucion>
+			</forma>
+		</pregunta>
+		
+		<pregunta>
+			<forma>
+				<enunciado>
+					<texto tipo="normal">¿Para qué sirve la sentencia if?</texto> 
+				</enunciado>
+				<opciones>
+					<alternativa tipo="solucion" tema="Comprensión de conceptos">  
+						<texto tipo="normal">Para controlar el flujo de ejecución de un programa</texto>
+					</alternativa>
+					<alternativa tipo="distractor" tema="Comprensión de conceptos">  
+						<texto tipo="normal">Para agrupar bloques de código</texto>
+					</alternativa>
+					<alternativa tipo="distractor" tema="Comprensión de conceptos">  
+						<texto tipo="normal">Para indentar código</texto>
+					</alternativa>
+				</opciones>
+				<solucion>
+					<texto tipo="normal"> If permite controlar el flujo de ejecución para que el programa haga una u otra cosa.</texto>
+					<texto tipo="normal">
+						if condicion:
+						   bloque condicional
+						else:
+						   bloque alternativo
+						bloque final
+					</texto>
+				</solucion>
+			</forma>
+
+			<forma>
+				<enunciado>
+					<texto tipo="normal">¿Para que sirve la sentencia else?</texto> 
+				</enunciado>
+				<opciones>
+					<alternativa tipo="solucion" tema="Comprensión de conceptos">  
+						<texto tipo="normal">Para controlar el flujo de ejecución de un programa</texto>
+					</alternativa>
+					<alternativa tipo="distractor" tema="Comprensión de conceptos">  
+						<texto tipo="normal">Para agrupar bloques de código</texto>
+					</alternativa>
+					<alternativa tipo="distractor" tema="Comprensión de conceptos">  
+						<texto tipo="normal">Para indentar código</texto>
+					</alternativa>
+				</opciones>
+				<solucion>
+					<texto tipo="normal"> Else permite controlar el flujo de ejecución para que el programa haga algo cuando no se cumple la condición de un if.</texto>
+					<texto tipo="normal">
+						if condicion:
+						   bloque condicional
+						else:
+						   bloque alternativo
+						bloque final
+					</texto>
+				</solucion>
+			</forma>
+		</pregunta>
+
+		<!--
+		<pregunta>
+			<forma>
+				<enunciado>
+					<texto tipo="normal">¿Qué imprime el siguiente código?</texto> 
+					<texto tipo="normal">
+						a = 10
+						if a &lt; 15:
+							print "a es pequeña"
+						else:
+							print "a es grande"
+					</texto>			
+				</enunciado>
+				<opciones>
+					<alternativa tipo="solucion" tema="Análisis"> 
+						<texto tipo="normal">a es pequeña</texto>
+					</alternativa>
+					<alternativa tipo="distractor" tema="Análisis"> 
+						<texto tipo="normal">a es grande</texto>
+					</alternativa>
+				</opciones>
+				<solucion>
+					<texto tipo="normal">a &lt; 15 es verdadero por lo que imprime que es pequeña</texto>
+				</solucion>
+			</forma>
+			
+			<forma>
+				<enunciado>
+					<texto tipo="normal">¿Qué imprime el siguiente código?</texto> 
+					<texto tipo="normal">
+						a = 10
+						if a &lt; 20:
+							print "a es pequeña"
+						if a &lt; 5:
+							print "a es muy pequeña"
+						else:
+						    print "a no es tan pequeña"
+						if a &gt; 0:
+							print "a es positiva"
+						else:
+							print "a es negativa"
+					</texto>			
+				</enunciado>
+				<opciones>
+					<alternativa tipo="solucion" tema="Análisis"> 
+						<texto tipo="normal">a es pequeña</texto> 
+						<texto tipo="normal">a no es tan pequeña</texto> 
+						<texto tipo="normal">a es positiva</texto>
+					</alternativa>
+					<alternativa tipo="distractor" tema="Análisis"> 
+						<texto tipo="normal">a es pequeña</texto>
+						<texto tipo="normal">a e positiva</texto>
+					</alternativa>
+					<alternativa tipo="distractor" tema="Análisis"> 
+						<texto tipo="normal">a no es tan pequeña</texto>
+						<texto tipo="normal">a es positiva</texto>
+					</alternativa>
+				</opciones>
+				<solucion>
+					<texto tipo="normal">Los bloques if-else son independientes de otros if-else, el if de la linea 2 es independiente del if-else de las lineas 4 y 6, y del de la linea 8 y 10.</texto>
+				</solucion>
+			</forma>
+			
+		</pregunta>
+		-->
+		
+		<pregunta>
+			<!--
+			<forma>
+				<enunciado>
+					<texto tipo="normal">¿Está bien el siguiente código?</texto> 
+					<texto tipo="normal">
+						a = 1
+						b = 2
+						if a > b:
+						   a=b	
+					</texto>
+				</enunciado>
+				<opciones>
+					<alternativa tipo="distractor" tema="Sintaxis">  
+						<texto tipo="normal">No</texto> 					
+					</alternativa>
+					<alternativa tipo="solucion" tema="Sintaxis básica">  
+						<texto tipo="normal">Sí</texto> 					
+					</alternativa>
+				</opciones>
+				<solucion>
+					<texto tipo="normal">La solución a esta pregunta es Print.</texto>					
+				</solucion>
+			</forma>
+			-->
+			<forma>
+				<enunciado>
+					<texto tipo="normal">Qué significa For?</texto> 
+				</enunciado>
+				<opciones>
+					<alternativa tipo="solucion" tema="Iteración">  
+						<texto tipo="normal">Para cada</texto> 					
+					</alternativa>
+					<alternativa tipo="distractor" tema="Recursión">  
+						<texto tipo="normal">Mientras</texto> 					
+					</alternativa>
+					<alternativa tipo="distractor" tema="Condicional">  
+						<texto tipo="normal">En caso contrario</texto> 					
+					</alternativa>
+				</opciones>
+				<solucion>
+					<texto tipo="normal">La solución es para cada debido a que es un ciclo.</texto>					
+				</solucion>
+			</forma>
+			<forma>
+				<enunciado>
+					<texto tipo="normal">Qué significa if?</texto> 
+				</enunciado>
+				<opciones>
+					<alternativa tipo="solucion" tema="Condicional">  
+						<texto tipo="normal">Si</texto> 					
+					</alternativa>
+					<alternativa tipo="distractor" tema="Recursión">  
+						<texto tipo="normal">Mientras</texto> 
+						
+					</alternativa>
+					<alternativa tipo="distractor" tema="Iteración">  
+						<texto tipo="normal">Para cada</texto> 
+						
+					</alternativa>
+				</opciones>
+				<solucion>
+					<texto tipo="normal">La solución a esta pregunta es si, ya que es un condicional.</texto>					
+				</solucion>
+			</forma>
+		</pregunta>
+	</evaluacion>
+	<feedback>https://docs.google.com/a/usach.cl/forms/d/1bajht8mcBdPTMebzayRQ4NiWNRHoh-1ZNXBTpX7ml9g/viewform</feedback>
+</objeto>

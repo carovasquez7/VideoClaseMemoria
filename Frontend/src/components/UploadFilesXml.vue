@@ -40,17 +40,26 @@
         {{ message }}
         </v-alert>
 
-        <v-card v-if="fileInfos.length > 0" class="mx-auto">
+        <v-card v-if="fileInfos.length > 0" class="ms-auto">
           <v-list>
               <v-subheader>Lista de Archivos</v-subheader>
-              <v-list-item-group color="primary">
-                <v-list-item v-for="(file, index) in fileInfos" :key="index">
-                    <a :href="file.url">{{ file.name }}</a>
-                </v-list-item>
-              </v-list-item-group>
+
+                <v-list-item-group color="primary">
+                  <v-list-item v-for="(file, index) in fileInfos" :key="index">                       
+                      <v-btn x-small rounded class=ma-3 color="success" dark>
+                        <v-icon left>mdi-pencil</v-icon>
+                        Crear Video</v-btn>
+
+                      
+                      <a :href="file.url">{{ file.objeto.titulo }}</a>
+                      
+
+                  </v-list-item>                                   
+                </v-list-item-group>
+
           </v-list>
         </v-card>
-    </div>q
+    </div>
   </v-container>
 </template>
 
@@ -103,7 +112,7 @@ export default {
   },
   mounted() {
     UploadService.getFiles().then((response) => {
-      this.fileInfos = response.data;
+      this.fileInfos = response.data
     });
   },
 };
