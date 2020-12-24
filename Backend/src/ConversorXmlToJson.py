@@ -20,5 +20,5 @@ def ConversorXmlToJson(file):
 
 THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
 nombre_archivo= os.path.join(THIS_FOLDER,"XMLPRUEBA.xml")
-#print(type(nombre_archivo))
+print(type(nombre_archivo))
 ConversorXmlToJson(nombre_archivo)

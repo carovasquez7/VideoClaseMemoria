@@ -9,7 +9,7 @@ from werkzeug.utils import secure_filename
 from werkzeug.datastructures import  FileStorage
 from bson import json_util
 from flask_cors import CORS
-from ConversorXmlToJson import ConversorXmlToJson
+
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -24,7 +24,12 @@ def home():
 
 @app.route('/files-xml', methods=['GET'])
 def get_xmlfile():
-    files = mongo.db.files.find()
+    basedatos= mongo.db.files
+    files = basedatos.find({},{"_id":0, "objeto.@titulo":1})    
+    
+    #for x in files:
+     #     print(x)
+
     response = json_util.dumps(files)
     return Response(response, mimetype='/application/json')
 
@@ -34,8 +39,7 @@ def get_xmlfile():
 def upload_xmlfile():
   if request.method == "POST":
     if request.files:
-      xmlfile = request.files['xmlfile']
-      
+      xmlfile = request.files['xmlfile']      
       docJson = xmltodict.parse(xmlfile.read()) #Etapa de convertir XML a JSON (xml a dic)
       finalJson = json.loads(json.dumps(docJson))#json final
       #Cargar archivo XML a mongo
