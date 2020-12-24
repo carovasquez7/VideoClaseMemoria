@@ -48,12 +48,10 @@
                   <v-list-item v-for="(file, index) in fileInfos" :key="index">                       
                       <v-btn x-small rounded class=ma-3 color="success" dark>
                         <v-icon left>mdi-pencil</v-icon>
-                        Crear Video</v-btn>
+                        Crear Video</v-btn>                      
 
+                      <a :href="file.url">{{ file.objeto.titulo }}</a>                      
                       
-                      <a :href="file.url">{{ file.objeto.titulo }}</a>
-                      
-
                   </v-list-item>                                   
                 </v-list-item-group>
 
