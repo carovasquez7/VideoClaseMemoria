@@ -9,7 +9,7 @@ from werkzeug.utils import secure_filename
 from werkzeug.datastructures import  FileStorage
 from bson import json_util
 from flask_cors import CORS
-
+#######CONEXIÓN CON BASE DE DATOS MONGODB #####
 app = Flask(__name__)
 cors = CORS(app)
 app.config["MONGO_URI"] = "mongodb://localhost:27017/videoclasedb"
@@ -17,10 +17,10 @@ mongo = PyMongo(app)
 #RUTAS DE LA API
 @app.route('/')
 def home():
-    return ('Hola mundo')
-
+      return ('Hola mundo')
 ########
 
+######## Obtener archivo de la base de datos, entregando un valor especifico del archivo JSON que está almacenado en la Base de datos ######
 @app.route('/files-xml', methods=['GET'])
 def get_xmlfile():
     basedatos= mongo.db.files
@@ -29,15 +29,13 @@ def get_xmlfile():
     return Response(response, mimetype='/application/json')
 
 ##### POST-GET xml API-MOONGO
-
 @app.route("/upload-xml", methods=["GET", "POST"])
 def upload_xmlfile():
   if request.method == "POST":
     if request.files:
       xmlfile = request.files['xmlfile']
       docJson = xmltodict.parse(xmlfile.read(),attr_prefix='') #Etapa de convertir XML a JSON (xml a dic)
-      finalJson = json.loads(json.dumps(docJson))#json final
-      print(finalJson)
+      finalJson = json.loads(json.dumps(docJson))#json final      
       #Cargar archivo XML a mongo
       #Cargar finalJson a mongo-base de datos
       mongo.db.files.insert_one(finalJson)  
@@ -70,7 +68,6 @@ def upload_xmlfile():
     </div>
   </div>
 </div>
-
     '''
 
 
